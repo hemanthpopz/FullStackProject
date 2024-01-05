@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registration</title>
+</head>
+<body>
+	<input type="text" name="name" id="name">
+	<select id="gender">
+		<option value="">--</option>
+		<option value="male">M</option>
+		<option value="female">F</option>
+	</select>
+	<input type="text" name="email" id="email">
+	<input type="text" name="mobile" id="mobile">
+	<hr>
+	<h1 id="dName">NAME</h1>
+	<h2 id="dGender">GENDER</h2>
+	<h3 id="dEmail">EMAIL</h3>
+	<h4 id="dMobile">MOBILE</h4>
+	<hr>
+	<button onclick="showName()">NAME</button>
+	<button onclick="showGender()">GENDER</button>
+	<button onclick="showEmail()">EMAIL</button>
+	<button onclick="showMobile()">MOBILE</button>
+	<button onclick="resetForm()">RESET FORM</button>
+	<button onclick="resetDisplay()">RESET DISPLAY</button>
+
+	<script type="text/javascript">
+
+        let Displayname = document.getElementById('dName');
+        let Displaygender = document.getElementById('dGender');
+        let Displayemail = document.getElementById('dEmail');
+        let Displaymobile = document.getElementById('dMobile');
+
+        
+
+
+        let getName = document.getElementById('name')
+
+        let getGender = document.getElementById('gender');
+
+        let getEmail = document.getElementById('email');
+
+        let getMobile = document.getElementById('mobile')
+
+		function showName() {
+			
+
+            Displayname.textContent = getName.value
+		}
+
+		function showGender() {
+            Displaygender.textContent = getGender.value
+		}
+
+		function showEmail() {
+            Displayemail.textContent = getEmail.value
+		}
+
+		function showMobile() {
+			
+            Displaymobile.textContent = getMobile.value
+		}
+
+		function resetForm() {
+			getName.value = ''
+            getGender.value = ''
+            getEmail.value = ''
+            getMobile.value = ''
+		}
+
+		function resetDisplay() {
+			Displayname.textContent = ''
+            Displaygender.textContent = ''
+            Displaymobile.textContent = ''
+            Displayemail.textContent = ''
+		}
+	</script>
+</body>
+</html>
